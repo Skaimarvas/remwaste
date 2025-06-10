@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+.no-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent; /* Chrome, Safari, and Opera */
+}
+.no-scrollbar::-webkit-scrollbar-track {
+  background: transparent; /* Chrome, Safari, and Opera */
+}

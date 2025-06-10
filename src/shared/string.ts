@@ -1,4 +1,11 @@
-import { Calendar, CreditCard, MapPin, Shield, Trash2, Truck } from "lucide-react";
+import {
+  Calendar,
+  CreditCard,
+  MapPin,
+  Shield,
+  Trash2,
+  Truck,
+} from "lucide-react";
 
 export const processSteps = [
   { id: 1, name: "Postcode", icon: MapPin, completed: true },
