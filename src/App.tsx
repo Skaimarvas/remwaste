@@ -10,8 +10,11 @@ function App() {
 
   const handleSelectSkip = (skip: Skip) => {
     if (selectedSkip && selectedSkip.id === skip.id) {
-      setShowSummary(!showSummary);
-      return setSelectedSkip(null);
+      if (selectedSkip && selectedSkip.id === skip.id) {
+        setShowSummary((prev) => !prev);
+        setSelectedSkip(null);
+        return;
+      }
     }
     setSelectedSkip(skip);
     setShowSummary(true);
@@ -27,9 +30,7 @@ function App() {
   };
 
   return (
-    <div
-      className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 max-md:mb-48"
-    >
+    <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 max-md:mb-48">
       <FloatingSidebar />
       <MainContent
         selectedSkip={selectedSkip}
